@@ -7,7 +7,7 @@ function EditTask({ task, onTaskUpdated, onCancel }) {
 
   const handleUpdate = async () => {
     try {
-      const response = await axios.put(`/tasks/${task._id}`, {
+      const response = await axios.post(`/tasks/update/${task._id}`, {
         title,
         description,
       });
