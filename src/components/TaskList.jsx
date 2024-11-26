@@ -31,7 +31,7 @@ function TaskList() {
 
   const handleTaskDeleted = async (taskId) => {
     try {
-      await axios.delete(`/tasks/${taskId}`);
+      await axios.delete(`/tasks/delete/${taskId}`);
       setTasks(tasks.filter((task) => task._id !== taskId));
     } catch (err) {
       alert("Failed to delete task");
