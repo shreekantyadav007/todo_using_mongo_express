@@ -7,3 +7,7 @@ For add:<br>
 
 For update:<br>
 <img src="todo_2.jpg" /> <br />
+
+
+Fronted Link :
+https://phenomenal-kataifi-a35edd.netlify.app/ ( This link is only support for list and add todo as vercel host does not support put and delete method. my vercel host is {https://todo-using-mongo-express-backend.vercel.app/api/tasks} )
