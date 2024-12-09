@@ -2,7 +2,7 @@ import { useState } from "react";
 import EditTask from "./EditTask";
 import axios from "axios";
 
-function Task({ task, onTaskUpdated, onTaskDeleted }) {
+function Task({ task, onTaskUpdated, onTaskDeleted, onTaskStatus }) {
   const [isEditing, setIsEditing] = useState(false);
 
   const handleEditClick = () => {
@@ -27,12 +27,8 @@ function Task({ task, onTaskUpdated, onTaskDeleted }) {
   };
 
   const updateStatus = async (taskId, status) => {
-        try {
-            const response = await axios.post("http://localhost:5000/api/tasks/status", {
-                taskId,
-                status,
-            });
-         //   setTasks(tasks.map((task) => (task._id === taskId ? response.data : task)));
+        try {  
+          await onTaskStatus(taskId, status)
         } catch (error) {
             console.error("Error updating status:", error);
         }
