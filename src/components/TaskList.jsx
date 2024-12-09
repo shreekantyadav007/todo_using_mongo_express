@@ -40,7 +40,7 @@ function TaskList() {
 
  const handleTaskStatus = async (taskId, status) =>{
    try {
-      await axios.post(`/tasks/status`);
+      const response =  await axios.post(`/tasks/status`);
        setTasks(tasks.map((task) => (task._id === taskId ? response.data : task)));
     } catch (err) {
       alert("Failed to update status task");
