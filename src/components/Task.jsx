@@ -28,7 +28,7 @@ function Task({ task, onTaskUpdated, onTaskDeleted, onTaskStatus }) {
 
   const updateStatus = async (taskId, status) => {
         try {  
-          await onTaskStatus(taskId, status)
+          await onTaskStatus(taskId, status);
         } catch (error) {
             console.error("Error updating status:", error);
         }
@@ -49,8 +49,8 @@ function Task({ task, onTaskUpdated, onTaskDeleted, onTaskStatus }) {
             {task.title} - {task.completed ? "Completed" : "Incomplete"} 
           </span>
           <div className="task-actions">
-            <button onClick={() => updateStatus(task._id, !task.completed)}>
-                            {task.status ? "Mark Incomplete" : "Mark Complete"}
+            <button onClick={updateStatus(task._id, !task.completed)}>
+                            {task.completed ? "Mark Incomplete" : "Mark Complete"}
              </button>
             <button className="edit" onClick={handleEditClick}>
               Edit
