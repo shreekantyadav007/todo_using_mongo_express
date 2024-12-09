@@ -45,8 +45,7 @@ function TaskList() {
     } catch (err) {
       alert("Failed to update status task");
     }
-  };
- }
+  }
   
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
