@@ -30,6 +30,7 @@ function App() {
           placeholder="Search tasks..."
           onChange={(e) => searchTasks(e.target.value)}
           />
+      <button onClick={searchTasks}>Search</button>
       <TaskList tasks={tasks} />
     </div>
   );
