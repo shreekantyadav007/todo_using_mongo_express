@@ -53,7 +53,7 @@ function Task({ task, onTaskUpdated, onTaskDeleted }) {
             {task.title} - {task.completed ? "Completed" : "Incomplete"} 
           </span>
           <div className="task-actions">
-            <button onClick={() => updateStatus(task._id, !task.status)}>
+            <button onClick={() => updateStatus(task._id, !task.completed)}>
                             {task.status ? "Mark Incomplete" : "Mark Complete"}
              </button>
             <button className="edit" onClick={handleEditClick}>
