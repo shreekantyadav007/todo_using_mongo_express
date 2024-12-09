@@ -32,7 +32,7 @@ function Task({ task, onTaskUpdated, onTaskDeleted }) {
                 taskId,
                 status,
             });
-            setTasks(tasks.map((task) => (task._id === taskId ? response.data : task)));
+         //   setTasks(tasks.map((task) => (task._id === taskId ? response.data : task)));
         } catch (error) {
             console.error("Error updating status:", error);
         }
